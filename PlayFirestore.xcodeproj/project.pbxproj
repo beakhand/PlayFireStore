@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E24063C722B28E650003416E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E24063C622B28E650003416E /* GoogleService-Info.plist */; };
+		E24063CD22B28F9D0003416E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E24063CC22B28F9D0003416E /* Default-568h@2x.png */; };
 		E2D4AB2222B2877E00FBA056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4AB2122B2877E00FBA056 /* AppDelegate.swift */; };
 		E2D4AB2422B2877E00FBA056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4AB2322B2877E00FBA056 /* ViewController.swift */; };
 		E2D4AB2722B2877E00FBA056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D4AB2522B2877E00FBA056 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E24063C622B28E650003416E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E24063CC22B28F9D0003416E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E2D4AB1E22B2877E00FBA056 /* PlayFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D4AB2122B2877E00FBA056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D4AB2322B2877E00FBA056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,9 +39,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E24063C822B28E910003416E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E24063C622B28E650003416E /* GoogleService-Info.plist */,
+				E2D4AB2D22B2878200FBA056 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E24063C922B28EAE0003416E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E2D4AB2522B2877E00FBA056 /* Main.storyboard */,
+				E2D4AB2A22B2878200FBA056 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E24063CA22B28ECD0003416E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2D4AB2822B2878200FBA056 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E24063CB22B28ED90003416E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2D4AB2322B2877E00FBA056 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E2D4AB1522B2877E00FBA056 = {
 			isa = PBXGroup;
 			children = (
+				E24063CC22B28F9D0003416E /* Default-568h@2x.png */,
 				E2D4AB2022B2877E00FBA056 /* PlayFirestore */,
 				E2D4AB1F22B2877E00FBA056 /* Products */,
 			);
@@ -55,11 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				E2D4AB2122B2877E00FBA056 /* AppDelegate.swift */,
-				E2D4AB2322B2877E00FBA056 /* ViewController.swift */,
-				E2D4AB2522B2877E00FBA056 /* Main.storyboard */,
-				E2D4AB2822B2878200FBA056 /* Assets.xcassets */,
-				E2D4AB2A22B2878200FBA056 /* LaunchScreen.storyboard */,
-				E2D4AB2D22B2878200FBA056 /* Info.plist */,
+				E24063CB22B28ED90003416E /* ViewControllers */,
+				E24063CA22B28ECD0003416E /* Resources */,
+				E24063C922B28EAE0003416E /* UI */,
+				E24063C822B28E910003416E /* SupportingFiles */,
 			);
 			path = PlayFirestore;
 			sourceTree = "<group>";
@@ -123,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D4AB2C22B2878200FBA056 /* LaunchScreen.storyboard in Resources */,
+				E24063C722B28E650003416E /* GoogleService-Info.plist in Resources */,
 				E2D4AB2922B2878200FBA056 /* Assets.xcassets in Resources */,
+				E24063CD22B28F9D0003416E /* Default-568h@2x.png in Resources */,
 				E2D4AB2722B2877E00FBA056 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DBB9P46DP;
-				INFOPLIST_FILE = PlayFirestore/Info.plist;
+				INFOPLIST_FILE = PlayFirestore/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DBB9P46DP;
-				INFOPLIST_FILE = PlayFirestore/Info.plist;
+				INFOPLIST_FILE = PlayFirestore/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

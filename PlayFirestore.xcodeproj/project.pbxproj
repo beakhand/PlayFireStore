@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E017E58C3638AF8639938F6D /* libPods-PlayFirestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C766F46928DE1E758630256 /* libPods-PlayFirestore.a */; };
 		E24063C722B28E650003416E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E24063C622B28E650003416E /* GoogleService-Info.plist */; };
 		E24063CD22B28F9D0003416E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E24063CC22B28F9D0003416E /* Default-568h@2x.png */; };
 		E2D4AB2222B2877E00FBA056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4AB2122B2877E00FBA056 /* AppDelegate.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520D6F40DBC46D7458614348 /* Pods-PlayFirestore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayFirestore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayFirestore/Pods-PlayFirestore.debug.xcconfig"; sourceTree = "<group>"; };
+		6C766F46928DE1E758630256 /* libPods-PlayFirestore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayFirestore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24063C622B28E650003416E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E24063CC22B28F9D0003416E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E2D4AB1E22B2877E00FBA056 /* PlayFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +29,7 @@
 		E2D4AB2822B2878200FBA056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2D4AB2B22B2878200FBA056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D4AB2D22B2878200FBA056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A1230CABA00DBCE53EDDD5 /* Pods-PlayFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayFirestore.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayFirestore/Pods-PlayFirestore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E017E58C3638AF8639938F6D /* libPods-PlayFirestore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C216BDE0878F4686413D73D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				520D6F40DBC46D7458614348 /* Pods-PlayFirestore.debug.xcconfig */,
+				E9A1230CABA00DBCE53EDDD5 /* Pods-PlayFirestore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF169D59E6CDA0E3CA3E250B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C766F46928DE1E758630256 /* libPods-PlayFirestore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E24063C822B28E910003416E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,8 @@
 				E24063CC22B28F9D0003416E /* Default-568h@2x.png */,
 				E2D4AB2022B2877E00FBA056 /* PlayFirestore */,
 				E2D4AB1F22B2877E00FBA056 /* Products */,
+				8C216BDE0878F4686413D73D /* Pods */,
+				AF169D59E6CDA0E3CA3E250B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +133,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2D4AB3022B2878200FBA056 /* Build configuration list for PBXNativeTarget "PlayFirestore" */;
 			buildPhases = (
+				C3FFFDF9A9F840EABFDB4E91 /* [CP] Check Pods Manifest.lock */,
 				E2D4AB1A22B2877E00FBA056 /* Sources */,
 				E2D4AB1B22B2877E00FBA056 /* Frameworks */,
 				E2D4AB1C22B2877E00FBA056 /* Resources */,
@@ -169,6 +194,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3FFFDF9A9F840EABFDB4E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlayFirestore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2D4AB1A22B2877E00FBA056 /* Sources */ = {
@@ -320,11 +370,13 @@
 		};
 		E2D4AB3122B2878200FBA056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520D6F40DBC46D7458614348 /* Pods-PlayFirestore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DBB9P46DP;
 				INFOPLIST_FILE = PlayFirestore/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,11 +390,13 @@
 		};
 		E2D4AB3222B2878200FBA056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A1230CABA00DBCE53EDDD5 /* Pods-PlayFirestore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DBB9P46DP;
 				INFOPLIST_FILE = PlayFirestore/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

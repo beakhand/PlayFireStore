@@ -19,10 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpL-yx-K62">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="157" y="433" width="100" height="30"/>
+                                <state key="normal" title="add document"/>
                                 <connections>
-                                    <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="On2-OF-Ly8"/>
+                                    <action selector="onAddDocumentButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="On2-OF-Ly8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-14-43s">
+                                <rect key="frame" x="159" y="471" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="get document"/>
+                                <connections>
+                                    <action selector="onGetDocumentButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JbM-JD-JqQ"/>
                                 </connections>
                             </button>
                         </subviews>

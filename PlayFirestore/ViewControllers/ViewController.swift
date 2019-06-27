@@ -18,12 +18,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func onButtonTap(_ sender: Any) {
+    @IBAction func onAddDocumentButtonTap(_ sender: Any) {
         addDocument()
     }
     
-    func addDocument() {
-        let db = Firestore.firestore()
+    @IBAction func onGetDocumentButtonTap(_ sender: Any) {
+        getDocument()
+    }
+    
+    
+    private var db: Firestore {
+        return Firestore.firestore()
+    }
+    
+    private func addDocument() {
         var ref: DocumentReference?
         ref = db.collection("users").addDocument(data: [
             "first": "Aba",
@@ -37,6 +45,24 @@ class ViewController: UIViewController {
                 print("Success add document - ID -> \(id)")
             }
         }
+    }
+    
+    private func getDocument() {
+        db.collection("users").getDocuments() { querySnapshot, err in
+            if let err = err {
+                print("Error ge document \(err)")
+            } else {
+                guard let query = querySnapshot else { return }
+                query.documents.forEach { doc in
+                    print("get document id -> \(doc.documentID) : data -> \(doc.data())")
+                }
+            }
+            
+        }
+        
+        
+        
+        
     }
 }
 

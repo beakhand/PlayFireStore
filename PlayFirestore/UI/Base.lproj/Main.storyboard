@@ -18,31 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpL-yx-K62">
-                                <rect key="frame" x="157" y="433" width="100" height="30"/>
-                                <state key="normal" title="add document"/>
-                                <connections>
-                                    <action selector="onAddDocumentButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="On2-OF-Ly8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-14-43s">
-                                <rect key="frame" x="159" y="471" width="96" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-wh-xVr">
+                                <rect key="frame" x="87" y="701" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="get document"/>
-                                <connections>
-                                    <action selector="onGetDocumentButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JbM-JD-JqQ"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-0U-KrD" customClass="ExpandableLabel" customModule="ExpandableLabel">
+                                <rect key="frame" x="40" y="54" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05M-V6-cwn" customClass="ExpandableLabel" customModule="ExpandableLabel">
+                                <rect key="frame" x="20" y="438" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1H-w2-cl8">
+                                <rect key="frame" x="40" y="143" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NpL-yx-K62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W6K-L6-Yhp"/>
-                            <constraint firstItem="NpL-yx-K62" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ras-pd-D0q"/>
+                            <constraint firstItem="05M-V6-cwn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EyS-PF-Tdx"/>
+                            <constraint firstItem="ew5-0U-KrD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YEH-Nc-Dsm"/>
+                            <constraint firstItem="ew5-0U-KrD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="b3k-94-DVd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ew5-0U-KrD" secondAttribute="trailing" constant="40" id="cXP-jz-Ebd"/>
+                            <constraint firstItem="05M-V6-cwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j2I-ho-I9H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05M-V6-cwn" secondAttribute="trailing" constant="20" id="qUi-lq-PSF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="NpL-yx-K62" id="s7E-4i-yNP"/>
+                        <outlet property="exLabel" destination="05M-V6-cwn" id="6oM-Y6-PEU"/>
+                        <outlet property="label" destination="ew5-0U-KrD" id="XIc-18-39F"/>
+                        <outlet property="textField" destination="N1H-w2-cl8" id="Xvb-pj-bko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

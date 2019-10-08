@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,47 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-wh-xVr">
-                                <rect key="frame" x="87" y="701" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8B-PS-Muj" userLabel="InputAreaView">
+                                <rect key="frame" x="0.0" y="798" width="414" height="64"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Min-Jd-iAr">
+                                        <rect key="frame" x="14" y="15" width="330" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMD-JA-SqE">
+                                        <rect key="frame" x="358" y="17" width="42" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="kYH-gH-HcT"/>
+                                        </constraints>
+                                        <state key="normal" title="send"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="5vi-0o-WI3"/>
+                                    <constraint firstItem="Min-Jd-iAr" firstAttribute="centerY" secondItem="o8B-PS-Muj" secondAttribute="centerY" id="7fF-Zc-F4e"/>
+                                    <constraint firstItem="jMD-JA-SqE" firstAttribute="centerY" secondItem="o8B-PS-Muj" secondAttribute="centerY" id="J1q-Sk-7lg"/>
+                                    <constraint firstAttribute="trailing" secondItem="jMD-JA-SqE" secondAttribute="trailing" constant="14" id="cfY-UJ-W2G"/>
+                                    <constraint firstItem="Min-Jd-iAr" firstAttribute="leading" secondItem="o8B-PS-Muj" secondAttribute="leading" constant="14" id="cyC-um-I6t"/>
+                                    <constraint firstItem="jMD-JA-SqE" firstAttribute="leading" secondItem="Min-Jd-iAr" secondAttribute="trailing" constant="14" id="mL3-GR-N1C"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-0U-KrD" customClass="ExpandableLabel" customModule="ExpandableLabel">
-                                <rect key="frame" x="40" y="54" width="334" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05M-V6-cwn" customClass="ExpandableLabel" customModule="ExpandableLabel">
-                                <rect key="frame" x="20" y="438" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1H-w2-cl8">
-                                <rect key="frame" x="40" y="143" width="321" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XtA-Yh-abz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="05M-V6-cwn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EyS-PF-Tdx"/>
-                            <constraint firstItem="ew5-0U-KrD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YEH-Nc-Dsm"/>
-                            <constraint firstItem="ew5-0U-KrD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="b3k-94-DVd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ew5-0U-KrD" secondAttribute="trailing" constant="40" id="cXP-jz-Ebd"/>
-                            <constraint firstItem="05M-V6-cwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j2I-ho-I9H"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05M-V6-cwn" secondAttribute="trailing" constant="20" id="qUi-lq-PSF"/>
+                            <constraint firstItem="XtA-Yh-abz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Sn-FV-of7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o8B-PS-Muj" secondAttribute="bottom" id="FSf-zq-CNc"/>
+                            <constraint firstItem="XtA-Yh-abz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KCX-bu-am8"/>
+                            <constraint firstItem="o8B-PS-Muj" firstAttribute="top" secondItem="XtA-Yh-abz" secondAttribute="bottom" id="foz-ct-S73"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XtA-Yh-abz" secondAttribute="trailing" id="k8Z-Qv-FKK"/>
+                            <constraint firstItem="o8B-PS-Muj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kMU-rg-drL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o8B-PS-Muj" secondAttribute="trailing" id="yt0-GM-TaS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="exLabel" destination="05M-V6-cwn" id="6oM-Y6-PEU"/>
-                        <outlet property="label" destination="ew5-0U-KrD" id="XIc-18-39F"/>
-                        <outlet property="textField" destination="N1H-w2-cl8" id="Xvb-pj-bko"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

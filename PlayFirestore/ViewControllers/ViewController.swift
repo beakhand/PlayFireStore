@@ -14,8 +14,12 @@ import RxSwift
 class ViewController: UIViewController {    
     private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var messageTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
     }
     
     
@@ -23,9 +27,22 @@ class ViewController: UIViewController {
         return Firestore.firestore()
     }
     
+    
+    private func bind() {
+        sendButton.rx.tap.asDriver()
+            .drive(Binder(self) { me, _ in
+                print(me.messageTextField.text ?? "")
+            
+            }).disposed(by: disposeBag)
+        
+        
+        //rx.key
+        
+        messageTextField.rx.text.asDriver().drive(Binder(self) { _, text in
+            print(text)
+        }).disposed(by: self.disposeBag)
+
+    }
 }
 
-//        textField.rx.text.asDriver().drive(Binder(self) { _, text in
-//            print(text)
-//        }).disposed(by: self.disposeBag)
 

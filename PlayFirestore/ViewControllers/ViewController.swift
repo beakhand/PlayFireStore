@@ -35,31 +35,36 @@ class ViewController: UIViewController {
                 print(me.messageTextField.text ?? "")
             }).disposed(by: disposeBag)
         
+        /*
         messageTextField.rx.text.asDriver()
             .drive(Binder(self) { me, text in
                 print(text)
             }).disposed(by: self.disposeBag)
+        */
         
         let keyHideViewTapGesture = UITapGestureRecognizer()
         keyHideViewTapGesture.rx.event.asDriver()
             .drive(Binder(self) { me, _ in
-              print("tap")
                 me.messageTextField.endEditing(true)
             }).disposed(by: disposeBag)
 
         keyHideView.addGestureRecognizer(keyHideViewTapGesture)
-    }
     
-    private func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.keyHideView, action: #selector(ViewController.hideKeyboard))
-        tap.cancelsTouchesInView = false
-        keyHideView.addGestureRecognizer(tap)
-    }
+        NotificationCenter.default.rx
+            .notification(UIResponder.keyboardWillShowNotification)
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(Binder(self) {_, _ in
+                print("show keybrd")
+            }).disposed(by: disposeBag)
+        
+        NotificationCenter.default.rx
+            .notification(UIResponder.keyboardWillHideNotification)
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(Binder(self) {_, _ in
+                print("hide keybrd")
+            }).disposed(by: disposeBag)
 
-    @objc func hideKeyboard() {
-        view.endEditing(true)
     }
-    
     
 }
 

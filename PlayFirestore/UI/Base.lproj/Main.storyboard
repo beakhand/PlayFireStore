@@ -46,13 +46,21 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="754"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VH0-wr-Gwl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="754"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VH0-wr-Gwl" firstAttribute="bottom" secondItem="XtA-Yh-abz" secondAttribute="bottom" id="9Pp-fX-j2W"/>
                             <constraint firstItem="XtA-Yh-abz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Sn-FV-of7"/>
+                            <constraint firstItem="VH0-wr-Gwl" firstAttribute="leading" secondItem="XtA-Yh-abz" secondAttribute="leading" id="Awr-ib-J2D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o8B-PS-Muj" secondAttribute="bottom" id="FSf-zq-CNc"/>
+                            <constraint firstItem="VH0-wr-Gwl" firstAttribute="top" secondItem="XtA-Yh-abz" secondAttribute="top" id="Ion-Tz-UoG"/>
                             <constraint firstItem="XtA-Yh-abz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KCX-bu-am8"/>
                             <constraint firstItem="o8B-PS-Muj" firstAttribute="top" secondItem="XtA-Yh-abz" secondAttribute="bottom" id="foz-ct-S73"/>
+                            <constraint firstItem="VH0-wr-Gwl" firstAttribute="trailing" secondItem="XtA-Yh-abz" secondAttribute="trailing" id="k2D-Gd-uMg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XtA-Yh-abz" secondAttribute="trailing" id="k8Z-Qv-FKK"/>
                             <constraint firstItem="o8B-PS-Muj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kMU-rg-drL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o8B-PS-Muj" secondAttribute="trailing" id="yt0-GM-TaS"/>
@@ -60,8 +68,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="keyHideView" destination="VH0-wr-Gwl" id="B2W-fp-3ME"/>
                         <outlet property="messageTextField" destination="Min-Jd-iAr" id="aW4-sD-yp2"/>
                         <outlet property="sendButton" destination="jMD-JA-SqE" id="XIl-zP-eOM"/>
+                        <outlet property="tableView" destination="XtA-Yh-abz" id="J4f-Yd-Mst"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

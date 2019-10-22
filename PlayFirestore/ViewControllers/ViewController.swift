@@ -14,15 +14,15 @@ import RxSwift
 class ViewController: UIViewController {    
     private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var keyHideView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         bind()
     }
-    
     
     private var db: Firestore {
         return Firestore.firestore()
@@ -33,28 +33,34 @@ class ViewController: UIViewController {
         sendButton.rx.tap.asDriver()
             .drive(Binder(self) { me, _ in
                 print(me.messageTextField.text ?? "")
-            
             }).disposed(by: disposeBag)
         
+        messageTextField.rx.text.asDriver()
+            .drive(Binder(self) { me, text in
+                print(text)
+            }).disposed(by: self.disposeBag)
         
-        //rx.key
-        
-        messageTextField.rx.text.asDriver().drive(Binder(self) { _, text in
-            print(text)
-        }).disposed(by: self.disposeBag)
+        let keyHideViewTapGesture = UITapGestureRecognizer()
+        keyHideViewTapGesture.rx.event.asDriver()
+            .drive(Binder(self) { me, _ in
+              print("tap")
+                me.messageTextField.endEditing(true)
+            }).disposed(by: disposeBag)
 
+        keyHideView.addGestureRecognizer(keyHideViewTapGesture)
     }
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.hideKeyboard))
+    
+    private func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.keyHideView, action: #selector(ViewController.hideKeyboard))
         tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+        keyHideView.addGestureRecognizer(tap)
     }
 
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
+    
+    
 }
+
 

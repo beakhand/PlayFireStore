@@ -53,8 +53,11 @@ class ViewController: UIViewController {
         NotificationCenter.default.rx
             .notification(UIResponder.keyboardWillShowNotification)
             .asDriver(onErrorDriveWith: Driver.empty())
-            .drive(Binder(self) {_, _ in
-                print("show keybrd")
+            .drive(Binder(self) { me, info in
+                guard let userInfo = info.userInfo else { return }
+                guard let rect = userInfo["UIKeyboardFrameEndUserInfoKey"] as? CGRect else { return }
+
+                
             }).disposed(by: disposeBag)
         
         NotificationCenter.default.rx
